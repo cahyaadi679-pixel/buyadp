@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Yop4n Hosting - Panel Bot & Script</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="logo-circle">
+        <img id="splash-logo" alt="Logo" />
+      </div>
+      <h1>Selamat datang di Yop4n Hosting</h1>
+      <p>Menyiapkan panel bot & script otomatis untukmu...</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img id="brand-logo" class="brand-logo-img" alt="Yop4n Hosting">
+      <div>
+        <div class="brand-title">Yop4n Hosting</div>
+        <div class="brand-subtitle">Panel Bot & Script Otomatis</div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <a href="https://wa.me/6281239977516" target="_blank" rel="noopener noreferrer" class="owner-link">
+        Butuh bantuan? Chat owner
+      </a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Deploy panel bot & script hanya beberapa detik.</h2>
+        <p>Pilih paket panel bot atau script, scan QRIS, dan sistem akan memproses secara otomatis tanpa ribet.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-badge">Realtime QRIS • Auto panel & file</div>
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-label">Pembayaran</div>
+            <div class="hero-stat-value">Gateway Pakasir (QRIS)</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Panel Bot</div>
+            <div class="hero-stat-value">Pterodactyl</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- live pembelian -->
+    <section class="live-purchase-section">
+      <div id="live-purchase-feed" class="live-feed">
+        <!-- notifikasi pembelian akan di-inject oleh main.js -->
+      </div>
+    </section>
+
+    <!-- paket panel bot -->
+    <section class="plans-section">
+      <h3 class="section-title">Paket Panel Bot</h3>
+      <p class="section-subtitle">Panel untuk bot WhatsApp & Telegram.</p>
+      <div id="plans-grid" class="plans-grid"></div>
+    </section>
+
+    <!-- produk script -->
+    <section class="script-section">
+      <h3 class="section-title">Produk Script</h3>
+      <p class="section-subtitle">Script Telegram pembelian otomatis store.</p>
+      <article class="card script-card" id="script-card" data-plan-key="script_alpha">
+        <div class="script-media">
+          <img id="script-image" alt="Script Alpha Centauri" />
+        </div>
+        <div class="script-body">
+          <h4 class="script-title">Script Alpha Centauri v4.5</h4>
+          <p class="script-desc">
+            Script Telegram untuk pembelian otomatis store. Support pembayaran otomatis
+            (integrasi gateway), management produk, dan pengiriman otomatis ke customer.
+          </p>
+          <div class="script-meta">
+            <span class="badge"><strong>Platform</strong> Telegram Bot</span>
+            <span class="badge"><strong>Otomatis</strong> Payment & Delivery</span>
+          </div>
+          <div class="script-footer">
+            <div class="script-price">
+              Rp 15.000 <span>sekali beli</span>
+            </div>
+            <button class="btn btn-primary btn-script-buy" id="script-buy-btn">
+              Beli Script
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- pembayaran -->
+    <section id="payment-section" class="payment-section hidden">
+      <div class="card payment-card">
+        <h3>Step 2 · Scan &amp; Bayar</h3>
+        <p id="payment-description" class="muted"></p>
+        <div class="payment-layout">
+          <div class="payment-qr">
+            <div id="qris-container" class="qris-container"></div>
+          </div>
+          <div class="payment-info">
+            <div class="payment-status" id="payment-status-badge">Menunggu QRIS...</div>
+            <ul class="payment-meta" id="payment-meta"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hasil pembelian (panel atau script) -->
+    <section id="result-section" class="server-section hidden">
+      <div class="card server-card">
+        <h3 id="result-title">Step 3 · Produk Siap Dipakai</h3>
+        <p id="result-subtitle" class="muted">
+          Detail login panel atau link download script akan muncul otomatis setelah pembayaran terkonfirmasi.
+          Jika ada kendala, langsung hubungi owner lewat WhatsApp di atas.
+        </p>
+        <div id="server-info" class="server-info"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Yop4n Hosting. Powered by Pakasir &amp; Pterodactyl.</span>
+  </footer>
+</body>
+        </html>
+  
